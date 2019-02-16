@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Medula One');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Pirata One');
+@import url('https://fonts.googleapis.com/css?family=UnifrakturCook:700');
+@import url('https://fonts.googleapis.com/css?family=New Rocker');
+
+
+
+
+
+body {
+	background-color:#F3FF00;
+}
+
+.mb-5, .my-5 {
+
+    margin-bottom: 1rem !important;
+
+}
+.navbar {
+	margin-top: 1%;
+}
+.brand-name{
+
+	font-family: 'New Rocker', sans-serif;
+	color: #242A35 !important;
+	font-size: 300%;
+	width: 45%
+	text-align:right;
+
+
+}
+/*#F3FF00*/
+
+::selection {
+  
+  background:#FEE45B;
+  color: #000000;	
+
+}
+
+
+
+.bg-white {
+
+    background-color: #FFFFFF !important;
+
+}
+
+.navbar-brand {
+
+	width: 20%;
+
+}
+
+.logo-pic{
+	width: 70%;
+	height: auto;
+	border-radius: 100% !important;
+		
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #242A35;
+	font-family: 'UnifrakturCook', sans-serif;
+	font-size: 250%;
+	font-weight: bold;
+}
+
+
+.bg-dark {
+
+    background-color: #F3FF00 !important;
+
+}
+.active{
+
+	color: #FF0080 !important;
+
+}
+ a:hover{
+
+ 	color: #E6363B !important;
+ }
+
+.bg-yellow{
+
+	background-color: #F3FF00 !important;
+
+}
+
+.post-text{
+	background-color: #FFFFFF;
+	font-family: 'Abel', sans-serif;
+	text-align: justify;
+	padding: 5%;
+	float: left;
+	width: 100%;
+	font-stretch: condensed;
+	font-size: larger;
+	
+}
+
+.h2-post-title{
+	font-family: 'Medula One', sans-serif;
+	background-color: #FFFFFF;
+	padding: 1%;
+	float: left;
+	margin: 1% 1% 1% 0;
+	width: 100%;
+	
+}
+
+.post-title{
+	color: #131313;
+	padding-left: 4%;
+	font-size: 25px;
+}
+
+
+.published-date {
+
+	background-color: #FFFFFF;
+	font-family: 'Pirata One', sans-serif;
+	color: #131313;
+	text-align: right;
+	padding: 1%;
+	width: 28%;
+	float: right;
+
+	
+}
