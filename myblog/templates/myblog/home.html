@@ -1,0 +1,42 @@
+{% extends 'myblog/test.html' %}
+
+{%block title%}Home{%endblock%}
+
+{% block content %}
+
+	{% for post in posts %}
+
+					<div>
+	
+						<!-- <p>Totle number of members: {{count}} and You are logged in as <strong>{{user}}</strong> </p> -->
+
+						
+
+						<span class="h2-post-title shadow-lg p-3 mb-5 bg-white rounded"><a class="post-title " href="{%  url 'blog:detail' slug=post.slug %}" style="text-decoration: none;" >{{post.title}}</a></span>
+
+						<p class= "post-text shadow p-3 mb-5 bg-white rounded">{{post.snippet}}</p>
+
+						<p class="published-date"> Published by {{post.author}}  @{{post.published_date}} </p>
+
+
+
+
+					</div>
+
+	{% endfor %}
+
+							<ul class="nav nav-pills">
+							  <span class="nav-item dropdown">
+							    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+							    <div class="dropdown-menu">
+							      <a class="dropdown-item" href="#">Action</a>
+							      <a class="dropdown-item" href="#">Another action</a>
+							      <a class="dropdown-item" href="#">Something else here</a>
+							      <div class="dropdown-divider"></div>
+							      <a class="dropdown-item" href="#">Separated link</a>
+							    </div>
+							  </li>
+							</ul>
+	
+{% endblock %}
+

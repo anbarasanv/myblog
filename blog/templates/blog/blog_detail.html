@@ -1,0 +1,49 @@
+{% extends 'myblog/base.html' %}
+{%block title%}Blog{%endblock%}
+{% load crispy_forms_tags %}
+
+	{% block content %}
+
+		<div>
+
+			<img class="thumnail-banner" src="{{single_post.thumnail.url}}" alt="thumnail-image" />
+
+			<h2 class="h2-post-title shadow-lg p-3 mb-5 bg-white rounded">{{single_post.title}}</h2>
+
+			<p class= "post-text shadow p-3 mb-5 bg-white rounded">{{single_post.text}}</p>
+
+			<p class="published-date">Published by {{single_post.author}}  @{{single_post.published_date}}</p>
+
+			<p>Total number of comments: {{single_post.comments.count}}</p>
+
+			
+
+				{% if request.user.is_authenticated %}
+
+					{% for comment in single_post.comments.all %}
+						<p>{{comment.comment}}<p>
+						<p>{{comment.user}}</p>
+						<p>{{comment.time}}</p>
+					{% empty %}
+						<p> There is no Comments</p>
+					{% endfor %}
+					
+					<form method="post">
+							
+							{% csrf_token %}
+
+							{{form|crispy}}
+
+							<button type="submit" class="btn btn-primary">Post</button>
+							
+
+					</form>
+				{% endif %}
+
+			  
+
+
+
+		</div>
+
+	{% endblock %}

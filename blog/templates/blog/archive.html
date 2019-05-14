@@ -1,0 +1,28 @@
+{% extends 'myblog/base.html' %}
+
+{%block title%}Archive{%endblock%}
+{% load crispy_forms_tags %}
+
+	{% block content %}
+
+		<div>
+
+			<div>
+
+				{% for post in posts %}
+
+					<div>
+
+						<h2 class="post-archive"><a class="post-title " href="{%  url 'blog:detail' slug=post.slug %}" style="text-decoration: none;" >{{post.title}}</a></h2>
+
+
+					</div>
+
+				{% endfor %}
+
+			</div>
+
+
+		</div>
+
+	{% endblock %}

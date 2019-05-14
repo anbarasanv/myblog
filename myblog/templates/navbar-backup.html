@@ -1,0 +1,65 @@
+<!-- Navigation bar -->
+
+			<!-- Navbar menu -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-lg p-3 mb-5 bg-white rounded">
+
+
+			<div class="collapse navbar-collapse" id ="collapse_target">
+			
+				<ul class="navbar-nav shadow-lg p-3 mb-5 bg-yellow rounded">
+  					<li class="nav-item">
+    					<a class="nav-link active" href="{%url 'home' %}">Home</a>
+  					</li>
+  					<li class="nav-item">
+    					<a class="nav-link active" href="{%url 'blog:posts' %}">Blog</a>
+  					</li>
+  					<li class="nav-item">
+    					<a class="nav-link active" href="#">Contact</a>
+  					</li>
+  					{% if request.user.is_authenticated %}
+
+  						<li class="nav-item">
+    						<a class="nav-link active" href="{%url 'password_change' %}">Change password</a>
+  						</li>
+
+  						<li class="nav-item">
+    						<a class="nav-link active" href="{%url 'logout' %}">Logout</a>
+  						</li>
+
+  					{% else %}
+
+  						<li class="nav-item">
+    						<a class="nav-link active" href="{%url 'signup' %}">Signup</a>
+  						</li>
+
+  						<li class="nav-item">
+    						<a class="nav-link active" href="{%url 'login' %}">Login</a>
+  						</li>
+
+  					{% endif %}
+  					
+  					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          				<a class="dropdown-item" href="#">Action</a>
+          				<a class="dropdown-item" href="#">Another action</a>
+          			<div class="dropdown-divider"></div>
+          				<a class="dropdown-item" href="#">Something else here</a>
+        			</div>
+  					
+
+				</ul>
+
+			</div>
+			
+			
+			<span class="navbar-text brand-name">Simple Machi!</span>
+
+
+			<!-- Toggle Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_target" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+
+				<span class="navbar-toggler-icon"></span>
+			
+			</button>
+
+			
+			</nav>

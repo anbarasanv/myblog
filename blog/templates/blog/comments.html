@@ -1,0 +1,31 @@
+{% extends 'myblog/base.html' %}
+{%block title%}Blog{%endblock%}
+{% load crispy_forms_tags %}
+
+	{% block content %}
+
+
+			
+				<form method="post">
+						
+						{% csrf_token %}
+
+						{{form|crispy}}
+
+						<button type="submit" class="btn btn-primary">Post</button>
+						
+
+				</form>
+<!-- 			<p>Total number of comments: {{single_post.comments.count}}</p>
+			{% for comment in single_post.comments.all %}
+				<p>{{comment.body}}<p>
+				<p>{{comment.user}}</p>
+				<p>{{comment.time}}</p>
+			{% empty %}
+				<p> There is no Comments</p>
+			{% endfor %} -->
+
+
+	
+
+	{% endblock %}
