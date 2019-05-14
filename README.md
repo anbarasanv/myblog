@@ -6,6 +6,6 @@ As of now implemented.
 
 Future Plan:
 1.Providing Data analytics using wonderful visualization 
-2.Make exclusive catagories based articles, Poems, Art
+2.Making exclusive catagories based articles, Poems, Art
 3.Notification for specific followed blog writters content
 4.IT solutions
